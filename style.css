@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+html{
+    scroll-behavior: smooth;
+  }
+  #loading-container{
+    background: rgb(102, 98, 95); 
+    width:100%;
+    height:100vh;
+    position: fixed;
+    z-index: 9999999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+  }
+  #loading-container img{
+      height:6rem;
+  }
+  @keyframes scaling{
+    0%, 100%{
+      transform: scale(0.2);
+      background-color: #f5ac4d;
+    }
+    40%{
+      transform: scale(1);
+      background-color: #a14202;
+    }
+    50%{
+      transform: scale(1);
+      background-color: #ff2c07;
+    }
+  }
+  .loading-dot {
+      height: 20px;
+      width: 20px;
+      border-radius:50%;
+      transform: scale(0);
+      background-color:red;
+      animation: scaling 2.5s ease-in-out infinite;
+      display: inline-block;
+      margin:.5rem;
+  }
+  .loading-dot:nth-child(0){
+    animation-delay:0s;
+  }
+  .loading-dot:nth-child(1){
+    animation-delay:0.2s;
+  }
+  .loading-dot:nth-child(2){
+    animation-delay:0.4s;
+  }
+  .loading-dot:nth-child(3){
+    animation-delay:0.6s;
+  }
+  .loading-dot:nth-child(4){
+    animation-delay:0.8s;
+  }
+  .loading-dot:nth-child(5){
+    animation-delay:1s;
+  }
+.navbar-brand img{
+    height: 4rem;
+}
+header{
+    height: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+header .outer-width{
+    height: 100vh;
+    background:url(resimler/home-bg-1.jpg) center;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-attachment:fixed;
+    opacity: 0.88;    
+}
+header .inner-width{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+#navbarMenu ul li a{
+    transition: .2s linear;
+}
+#navbarMenu ul li:hover a{
+    color: rgb(247, 99, 1);
+}
+.inner-width h1{
+    font-family: 'Architects Daughter', cursive;
+    /* font-family: 'Dancing Script', cursive; */
+    letter-spacing: 10px;
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgb(214, 65, 11);
+    margin-top: 3rem;
+    margin-bottom:2rem;
+}
+header .inner-width h2::after{
+    content: "Mix-Mastering";
+    color: rgb(255, 255, 255);
+    animation: animasyon 10s linear infinite;
+}
+@keyframes animasyon{
+    33%{
+        content: "Enstrüman Kayıt";
+        color:rgb(255, 255, 255);
+    }
+    66%{
+        content: "Vokal Kayıt";
+        color: rgb(255, 255, 255);
+    }
+}
+.social-media{
+    margin-top: 7rem;
+}
+.social-media a{
+    font-size: 30px;
+    margin:0 20px;
+    color: rgb(235, 94, 0);
+    transition:  .2s linear;
+    text-decoration: none;
+}
+.social-media a:hover{
+    color: #f7ba4a;
+  }
+#sanatcilarimiz{
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}  
+#bizKimiz{
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background: #e9d362;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #333333, #e9d362);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #333333, #e9d362); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#bizKimiz .card{
+    max-height: 100vh;
+    width: 50%;
+    border:none;
+    background: #f3e081;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #c7c7c349, #f3e081);  /* Chrome 10-25, Safari 5.1-6 b4a450 */
+    background: linear-gradient(to top, #c7c7c349, #f3e081); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#bizKimiz .card img{
+    width: 380px;
+}
+#bizKimiz .card .card-title{
+    color: rgb(219, 91, 0);
+    font-weight: bold;
+}
+
+#Videos{
+    background: #ffd89b; 
+    background: -webkit-linear-gradient(to top, #19547b, #ffd89b);  
+    background: linear-gradient(to top, #19547b, #ffd89b); 
+}
+#Videos h1{
+    padding: 100px 50px 10px 50px;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(219, 91, 0);
+}
+
+.videos-text{
+    font-size: 25px;
+}
+
+#hizmetlerimiz{
+    background: #FFEFBA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#hizmetlerimiz  h1,#iletisim  h1,#sanatcilarimiz h1,#iletisim .social-media h5{
+    font-family: 'Oswald', sans-serif;
+    color: rgb(219, 91, 0);
+}
+#hizmetlerimiz .card:hover,#sanatcilarimiz .card:hover{
+    background-color:rgb(219, 91, 0);
+    color:#fff;
+    cursor: pointer;
+}
+#iletisim{
+    background-color: rgb(235, 233, 233);
+}
+#iletisim .w {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+#iletisim .w iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+@media screen and (max-width:500px) {
+    /* .carousel-control-prev,.carousel-control-next{
+        width: 12px;
+    } */
+    #iletisim .social-media{
+       margin-left: -20px;
+    }
+}
+@media screen and (max-width:768px) {
+    #bizKimiz .card{
+        width: 100%;
+    }
+    #Anasayfa h1{
+        font-size: 3rem;
+        padding-top: 50px;
+    }
+    header .outer-width{
+        background-attachment: initial;
+    }
+}
+/*
+@media screen and (max-width:980px) {
+
+    .carousel-inner iframe{
+        width: 300px;
+    } 
+
+
+}*/
